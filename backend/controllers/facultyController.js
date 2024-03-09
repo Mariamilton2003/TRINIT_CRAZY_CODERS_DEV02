@@ -35,7 +35,8 @@ exports.logoutFaculty = catchAsyncError(async (req, res, next) => {
     })
 })
 exports.getAllFaculty = catchAsyncError(async (req,res,next)=>{
-    const apiFeatures = new APIFeatures(Faculty.find(),req.query).search()
+    const resPerPage = 4;
+    const apiFeatures = new APIFeatures(Faculty.find(),req.query).search().filter().paginate(resPerPage);
     const faculty = await apiFeatures.query;
     res.status(200).json({
         success:true,

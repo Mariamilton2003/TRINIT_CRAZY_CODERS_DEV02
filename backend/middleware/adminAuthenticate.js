@@ -14,3 +14,13 @@ exports.isAuthenticatedAdmin = catchAsyncError(async (req,res,next)=>{
     next();
 })
 
+exports.authorizeAdminRoles = (...roles)=>{
+    return  (req,res,next) =>{
+         if(!roles.includes(req.admin.role) )
+         {
+             return next(new ErrorHandler(`Role ${req.admin.role} is not allowed`,401));
+ 
+         }
+         next();
+     }
+ }

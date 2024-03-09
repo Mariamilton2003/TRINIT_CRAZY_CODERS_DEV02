@@ -1,7 +1,7 @@
 const mongoose = require ('mongoose');
 const validator = require('validator');
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
 const studentSchema = new mongoose.Schema({
     name:{
         type:String,
@@ -53,6 +53,14 @@ const studentSchema = new mongoose.Schema({
     joinedAt:{
         type:Date,
         default: Date.now()
+    },
+    role:{
+        type:String,
+        default:'student'
+    },
+    feedback:{
+        type:String,
+        required:true
     }
 })
 

@@ -45,6 +45,20 @@ const facultySchema = new mongoose.Schema({
             ], message:['Please Enter Correct Department']
         }
     },
+    timeSlots:{
+        type:String,
+        required:[true, 'Please enter proper Time slots'],
+        enum:{
+            values:[
+                '9-Am',
+                '11-Am',
+                '1-Pm',
+                '3-Pm',
+                '5-Pm',
+                '7-Pm'
+            ]
+        }
+    },
     experience:{
         type:String,
         required:[true, 'Please Enter Faculty Experience'],
@@ -65,12 +79,17 @@ const facultySchema = new mongoose.Schema({
         }
     },
     pricing:{
-        type:String,
+        type:Number,
+        default :0.0,
         required:[true,'Please enter the Faculty Pricing']
     },
     joinedAt:{
         type:Date,
         default:Date.now()
+    },
+    role:{
+        type:String,
+        default:'faculty'
     }
 })
 

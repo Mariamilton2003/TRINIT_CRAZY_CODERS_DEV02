@@ -6,7 +6,8 @@ exports.newCourse = catchAsyncError(async (req,res,next)=>{
     const {...courseData} =req.body;
     const course = await Course.create({
         ...courseData,
-        faculty:req.faculty.id
+        faculty:req.faculty.id,
+       
     });
     res.status(200).json({
         success:true,

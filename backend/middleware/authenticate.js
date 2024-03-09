@@ -13,4 +13,15 @@ exports.isAuthenticated = catchAsyncError(async (req,res,next)=>{
     req.student = await student.findById(decoded.id);
     next();
 })
+exports.authorizeRoles = (...roles)=>{
+    return  (req,res,next) =>{
+         if(!roles.includes(req.student.role) )
+         {
+             return next(new ErrorHandler(`Role ${req.student.role} is not allowed`,401));
+ 
+         }
+         next();
+     }
+ }
+
 

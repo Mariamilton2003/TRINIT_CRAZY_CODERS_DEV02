@@ -13,3 +13,13 @@ exports.isAuthenticatedFaculty = catchAsyncError(async (req,res,next)=>{
     req.faculty = await Faculty.findById(decoded.id);
     next();
 })
+exports.authorizeFacultyRoles = (...roles)=>{
+    return  (req,res,next) =>{
+         if(!roles.includes(req.faculty.role) )
+         {
+             return next(new ErrorHandler(`Role ${req.faculty.role} is not allowed`,401));
+ 
+         }
+         next();
+     }
+ }
