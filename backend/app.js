@@ -7,7 +7,8 @@ const admin = require('./routes/admin');
 const question = require('./routes/question');
 const answer = require('./routes/answer');
 const feedback = require('./routes/feedback');
-const flashCard = require('./routes/flashCard')
+const flashCard = require('./routes/flashCard');
+const courseCard = require('./routes/courseCardList') ;
 const cookieParser = require('cookie-parser');
 const app = express();
 
@@ -20,7 +21,8 @@ app.use('/api/v1/',admin);
 app.use('/api/v1/',question);
 app.use('/api/v1/',answer);
 app.use('/api/v1/',feedback);
-app.use('/api/v1/',flashCard)
+app.use('/api/v1/',flashCard);
+app.use('/api/v1/',courseCard)
 
 
 app.use(errorMiddleware);
