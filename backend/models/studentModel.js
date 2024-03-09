@@ -60,7 +60,8 @@ const studentSchema = new mongoose.Schema({
     },
     feedback:{
         type:String,
-        required:true
+        required:true,
+        default:'Good'
     }
 })
 

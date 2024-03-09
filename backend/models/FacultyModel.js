@@ -103,7 +103,8 @@ facultySchema.methods.getJwtToken = function(){
     })
 }
 facultySchema.methods.isValidPassword = async function (password){
-    return await bcrypt.compare(password,this.password)
+   
+    return await bcrypt.compare(password,this.password);
 }
 
 let schema = mongoose.model('faculty',facultySchema);

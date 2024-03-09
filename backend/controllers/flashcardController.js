@@ -3,7 +3,12 @@ const catchAsyncError = require('../middleware/catchAsyncError');
 const FlashCard = require('../models/flashCardModel');
 
 exports.createFlashCard = catchAsyncError(async (req,res,next)=>{
-    const flashCard = await FlashCard.create(req.body);
+    const {...data} = req.body;
+    const flashCard = await FlashCard.create({
+        ...data,
+        student:req.student.id
+
+    });
     res.status(200).json({
         success:true,
         message:'FlashCard Created Successfully'
