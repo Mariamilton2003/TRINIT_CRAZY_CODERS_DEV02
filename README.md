@@ -41,7 +41,7 @@ node server.js
 
 ## Google Drive Link
 
-For additional resources and documentation, please visit our [https://drive.google.com/file/d/1e42cewK9I_QBxP2_12sArEkS3-ViFumZ/view](#).
+For additional resources and documentation, please visit our [Demo video](https://drive.google.com/file/d/1e42cewK9I_QBxP2_12sArEkS3-ViFumZ/view?usp=drivesdk).
 
 ## Contributing
 
