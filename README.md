@@ -1,6 +1,3 @@
-Certainly! Here's the updated README.md file with the "Getting Started" section containing only the run command, and a new section to include a Google Drive link:
-
----
 
 # Language Learning Platform
 
@@ -36,7 +33,10 @@ The Language Learning Platform is an interactive online platform designed to con
 To run the project, use the following command:
 
 ```
-npm start
+npm install
+npm run dev
+for backend
+node server.js
 ```
 
 ## Google Drive Link
@@ -51,10 +51,6 @@ We welcome contributions to improve the Language Learning Platform. If you'd lik
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
 
-For inquiries or support, please contact us at support@languagelearningplatform.com.
 
----
 
-Feel free to customize this README template further to include additional sections or information specific to your language learning platform.
