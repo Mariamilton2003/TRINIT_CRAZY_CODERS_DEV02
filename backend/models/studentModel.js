@@ -7,11 +7,6 @@ const studentSchema = new mongoose.Schema({
         type:String,
         required:[true,'Please Enter Your Name']
     },
-    dob:{
-        type:Date,
-        default:Date.now(),
-        required:true
-    },
     gender:{
         type:String,
         required:[true, 'Please Enter the Student Gender']
@@ -28,28 +23,7 @@ const studentSchema = new mongoose.Schema({
         maxlength:[6,'Password cannot Exceed Six Characters'],
         select:false
     },
-    yearOfStudy:{
-        type:String,
-        required:[true, 'Please Enter the Student year'],
-        enum:{
-            values:[
-                'I-year',
-                'II-year',
-                'III- year',
-                'IV- year'
-            ], message:['Please Enter Correct year']
-        }
-    },
-    languages:{
-        type:String,
-        required:[true, 'Please Enter the Language'],
-        enum:{
-            values:[
-                'TAMIL',
-                'ENGLISH'
-            ]
-        }
-    },
+   
     joinedAt:{
         type:Date,
         default: Date.now()

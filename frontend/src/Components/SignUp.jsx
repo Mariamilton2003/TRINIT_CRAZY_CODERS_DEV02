@@ -5,9 +5,9 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [gender, setGender] = useState("");
-  const [dob, setDob] = useState("");
   const [pass, setPass] = useState("");
   const [showPass, setShowPass] = useState(false);
+
   return (
     <>
       <div className="relative">
@@ -89,30 +89,9 @@ const SignUp = () => {
                 Female
               </div>
 
-              <div className="flex gap-1">
-                <label htmlFor="dob" className="font-heading text-lg">
-                  DOB:
-                </label>
-                <input
-                  type="date"
-                  name="dob"
-                  className="bg-transparent accent-rose-700"
-                  onClick={(e) => setDob(e.target.value)}
-                />
-              </div>
+             
             </div>
-            <div className="flex">
-              <select name="" id="">
-                <option>
-                  <input
-                    type="radio"
-                    value="eng"
-                    className="accent-rose-500 bg-transparent"
-                  />
-                  Eng
-                </option>
-              </select>
-            </div>
+         
           </div>
           <div className="mt-12 rounded-lg font-Body font-bold text-lg text-center px-3 py-4 w-full shadow-2xl text-white bg-accent-500">
             Sign Up

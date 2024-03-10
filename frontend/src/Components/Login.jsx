@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, use } from "react";
 import { Icon } from "@iconify/react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [showPass, setShowPass] = useState(false);
+  
+
+
+  
 
   return (
     <>
@@ -26,6 +30,7 @@ const Login = () => {
               type="text"
               name="email"
               className="bg-transparent p-2 border-b-2 border-b-rose-700"
+              value={email}
             />
           </div>
           <div className="flex flex-col gap-1 mt-5">
@@ -34,10 +39,11 @@ const Login = () => {
             </label>
             <div className="flex justify-between border-b-2 border-b-rose-700">
               <input
-                onChange={(e) => setEmail(ev.target.value)}
+                onChange={(e) => setPass(ev.target.value)}
                 name="pass"
                 type={showPass ? "text" : "password"}
                 className="bg-transparent p-2 "
+                value={pass}
               />
               {showPass ? (
                 <Icon
@@ -54,9 +60,9 @@ const Login = () => {
               )}
             </div>
           </div>
-          <div className="mt-12 rounded-xl font-Body font-bold text-xl text-center px-3 py-4 w-full shadow-2xl text-white bg-accent-500">
+          <button className="mt-12 rounded-xl font-Body font-bold text-xl text-center px-3 py-4 w-full shadow-2xl text-white bg-accent-500" >
             Login
-          </div>
+          </button>
         </div>
       </div>
     </>
