@@ -48,12 +48,18 @@ const NavBar = () => {
           </div>
 
           <div className="flex gap-7 justify-between">
-            <div className="px-5 py-2 rounded-3xl bg-primary-200 font-body  font-bold text-txt-800 hover:text-txt-100 hover:bg-primary-700">
+            <Link
+              to={"/login"}
+              className="px-5 py-2 rounded-3xl bg-primary-200 font-body  font-bold text-txt-800 hover:text-txt-100 hover:bg-primary-700"
+            >
               Sign in
-            </div>
-            <div className="px-5 py-2 rounded-3xl bg-primary-200 font-body  font-bold text-txt-800 hover:text-txt-100 hover:bg-primary-700">
+            </Link>
+            <Link
+              to={"/register"}
+              className="px-5 py-2 rounded-3xl bg-primary-200 font-body  font-bold text-txt-800 hover:text-txt-100 hover:bg-primary-700"
+            >
               Sign Up
-            </div>
+            </Link>
           </div>
         </div>
       </div>
