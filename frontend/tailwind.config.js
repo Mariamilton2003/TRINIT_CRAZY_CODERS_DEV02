@@ -3,6 +3,16 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "50%": { transform: "translateX(-42%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
+      },
+      animation: {
+        "marquee-infinite": "marquee 25s linear infinite",
+      },
       colors: {
         txt: {
           50: "var(--text-50)",
@@ -69,6 +79,12 @@ export default {
           900: "var(--accent-900)",
           950: "var(--accent-950)",
         },
+      },
+      backgroundImage: {
+        linearSecondary:
+          "linear-gradient(to right, #042ffb, #102fea, #182eda, #1d2dc9, #212cb9, #1f2aba, #1e29ba, #1c27bb, #1423cc, #0b1edd, #0314ee, #0001ff)",
+        linearPrimary:
+          "linear-gradient(to right top, #d16ba5, #cc6eb2, #c573bf, #bc78cc, #b07ed8, #a577df, #9872e6, #866dee, #7459f2, #6044f6, #462cf9, #1500fb)",
       },
       fontSize: {
         sm: "0.750rem",
